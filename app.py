@@ -9,7 +9,7 @@ import seaborn as sns
 
 st.set_page_config(page_title="Customer Segmentation - KMeans", layout="wide")
 st.title("Customer Segmentation (KMeans) — Walmart")
-st.markdown("Upload dataset transaksi Walmart (CSV) lalu klik *Train Segmentation*. Setelah itu lihat cluster, profil, dan prediksi untuk customer baru menggunakan CSV.")
+
 
 DATA_UP_PATH = "Walmart.csv"
 MODEL_PATH = os.path.join(MODELS_DIR, "model_customer_kmeans.pkl")
