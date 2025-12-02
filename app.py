@@ -15,3 +15,10 @@ try:
     st.pyplot(fig)
 except Exception as e:
     st.write("Visualisasi PCA gagal:", e)
+
+st.markdown("---")
+st.write("Notes:")
+st.write("""
+- Pastikan dataset mengandung kolom 'customer_id' ...
+- Feature names used in prediction: """ + (", ".join(feature_cols) if os.path.exists(MODEL_PATH) else "(n/a)") )
+
