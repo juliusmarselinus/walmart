@@ -134,6 +134,5 @@ else:
 st.markdown("---")
 st.write("Notes:")
 st.write("""
-- Pastikan dataset mengandung kolom 'customer_id' dan setidaknya 'quantity_sold' atau 'unit_price' agar fitur agregat bermakna.
-- Feature names used in prediction: """ + (", ".join(feature_cols) if os.path.exists(MODEL_PATH) else "(n/a)") )
+
 
