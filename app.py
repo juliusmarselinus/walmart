@@ -69,25 +69,4 @@ if os.path.exists(MODEL_PATH):
     except Exception as e:
         st.write("Visualisasi PCA gagal:", e)
 
-    st.markdown("---")
-    st.header("Prediksi cluster untuk customer baru dari CSV")
-
-    # ONLY CSV input
-    csv_up = st.file_uploader("Upload customer-level CSV (features)", type=["csv"], key="pred_csv")
-
-    if csv_up is not None:
-        try:
-            dfc = pd.read_csv(csv_up)
-            out = predict_from_dataframe(dfc)
-            st.dataframe(out.head(20))
-
-            st.download_button(
-                "Download predictions CSV",
-                data=out.to_csv(index=False).encode("utf-8"),
-                file_name="customer_clusters.csv"
-            )
-        except Exception as e:
-            st.error(f"Error: {e}")
-
-else:
-    st.info("Model segmentation belum tersedia. Upload dataset di sidebar lalu klik 'Train Segmentation'.")
+   
