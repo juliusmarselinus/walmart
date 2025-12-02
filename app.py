@@ -138,4 +138,4 @@ st.write("""
 - Feature names used in prediction: """ + (", ".join(feature_cols) if os.path.exists(MODEL_PATH) else "(n/a)") )
 
 
-emg perlu ya buang aja kalo ga perlu
+
